@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MotionBind: Multi-Modal Human Motion Alignment for Cross-Modal Retrieval, Recognition, and Generation">
+  <meta name="keywords" content="Human Motion, Multi-Modal Learning, Motion Generation, Cross-Modal Retrieval, MotionBind">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MotionBind: Multi-Modal Human Motion Alignment for Retrieval, Recognition, and Generation</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://www.upenn.edu">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Related Projects
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://vidal-lab.github.io/MotionBind/">
+            MotionBind
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">MotionBind: Multi-Modal Human Motion Alignment for Retrieval, Recognition, and Generation</h1>
+          <div class="is-size-5 publication-authors">
+            <!-- Author Block 1 -->
+            <span class="author-block">
+                <div class="author-thumbnail">
+                <img src="https://vidal-lab.github.io/dgm/_images/pp/kaleab_kinfu.jpg" alt="Kaleab A. Kinfu">
+                </div>
+                <a href="https://kaleab.me">Kaleab A. Kinfu</a><sup></sup>,
+            </span>
+
+            <!-- Author Block 2 -->
+            <span class="author-block">
+                <div class="author-thumbnail">
+                    <img src="https://directory.seas.upenn.edu/wp-content/uploads/2022/10/Vidal_Rene_Photo-e1666973953718.jpg" alt="René Vidal">
+                </div>
+              <a href="https://www.grasp.upenn.edu/people/rene-vidal/">René Vidal</a><sup></sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup></sup>University of Pennsylvania</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="#" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/vidal-lab/MotionBind" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent advances in multi-modal representation learning have led to unified embedding spaces that align modalities such as images, text, audio, and vision.
+            However, human motion sequences, a modality that is fundamental for understanding dynamic human activities, remains largely unrepresented in these frameworks. Semantic understanding of actions requires multi-modal grounding: text conveys descriptive semantics, vision provides visual context, and audio provides environmental cues.
+          </p>
+          <p>
+            To bridge this gap, we propose MotionBind, a novel architecture that extends the LanguageBind embedding space to incorporate human motion. MotionBind has two major components. The first one is a Multi-Scale Temporal Motion Transformer (MuTMoT) that maps motion sequences to semantically meaningful embeddings. Multimodal alignment is achieved via diverse cross-modal supervision, including motion-text pairs from HumanML3D and KIT-ML, motion-video pairs rendered from AMASS, and motion-video-audio triplets from AIST++. The second component is a Retrieval-Augmented Latent diffusion Model (REALM) that can generate motion sequences conditioned on many modalities.
+          </p>
+          <p>
+            MotionBind achieves state-of-the-art or competitive performance across motion reconstruction, cross-modal retrieval, zero-shot action recognition, and text-to-motion generation benchmarks.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- Approach -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Method Overview</h2>
+          <p class="has-text-justified">
+            MotionBind consists of two main components: <strong>MuTMoT</strong> (Multi-Scale Temporal Motion Transformer) for multi-modal representation learning and <strong>REALM</strong> (Retrieval-Augmented Latent diffusion Model) for motion generation.
+          </p>
+          <h3 class="title is-4">MuTMoT Architecture</h3>
+          <img src="./static/images/architecture/MuTMoT_arch.png" alt="MuTMoT Architecture" style="width: 100%; margin: 20px 0;">
+          <p class="has-text-justified">
+            MuTMoT is a transformer-based hierarchical encoder-decoder architecture that encodes motion sequences into compact embeddings aligned with a shared multi-modal space. It captures motion dynamics at multiple temporal resolutions, producing representations that reflect both fine-grained pose transitions and high-level action semantics. The architecture extends LanguageBind to include human motion, enabling joint cross-modal reasoning and retrieval across text, vision, audio, and motion.
+          </p>
+          <h3 class="title is-4">REALM Architecture</h3>
+          <img src="./static/images/architecture/REALM_arch.png" alt="REALM Architecture" style="width: 100%; margin: 20px 0;">
+          <p class="has-text-justified">
+            REALM is a retrieval-augmented latent diffusion model that generates motion sequences conditioned on any modality (text, video, or audio). It operates in the compact latent space defined by the MuTMoT encoder and uses temporal conditioning with learnable frame tokens that dynamically attend to conditioning context throughout the denoising process. By retrieving semantically similar motions from a large database, REALM enhances realism and controllability during generation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{
+          kinfu2025motionbind,
+          title={MotionBind: Multi-Modal Human Motion Alignment for Retrieval, Recognition, and Generation},
+          author={Kaleab A Kinfu and Rene Vidal},
+          booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
+          year={2025},
+          url={https://openreview.net/forum?id=sUjwDdyspc}
+      }</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="#" target="_blank">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/vidal-lab/MotionBind" target="_blank" class="external-link">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website template adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

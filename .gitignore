@@ -1,0 +1,47 @@
+# OS files
+.DS_Store
+**/.DS_Store
+Thumbs.db
+
+docs/resource/
+
+# Experiments directory
+exp/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Model checkpoints and data (if large)
+*.ckpt
+*.pth
+*.pt
+*.h5
+*.pkl
+data/
+datasets/
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.temp
